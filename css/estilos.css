@@ -39,8 +39,7 @@ body {
     }
 #background{
     position: absolute;
-    top: -20px;
-    height: 100%;
+    top: 100px;
 }
 .navbar {
     grid-area: nav;
@@ -71,8 +70,10 @@ body {
 }
 @media all and (max-width:768px){
     #background{
+        width: 250%;
+        height: auto;
         left: -70%;
-        top: 50px;
+        top: 115px;
     }
     .navbar{
         flex-direction: column;
@@ -129,11 +130,10 @@ body {
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 13vh;
     font-size: 25px;
     z-index: 1;
     width: 100vw;
-    margin-top: 30px;
+    margin-top: 130px;
 }
 .main span{
     color: #0060a0;
@@ -274,7 +274,7 @@ body {
 }
 @media all and (max-width: 768px){
     .main{
-        margin: 40px 0 0 0;
+        margin: 140px 0 0 0;
     }
     .hero{
         align-content: center;
