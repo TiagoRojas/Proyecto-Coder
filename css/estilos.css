@@ -126,12 +126,14 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     position: absolute;
     top: 13vh;
     font-size: 25px;
     z-index: 1;
     width: 100vw;
+    margin-top: 30px;
 }
 .main span{
     color: #0060a0;
@@ -160,11 +162,47 @@ body {
     padding: 5px;
     margin-left: 10px;
 }
+.title{
+    color: #3079ed;
+    animation-name: desenfoque;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+  }
+@keyframes desenfoque{
+    0%{
+      letter-spacing: 1em;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100%{
+      filter: blur(0);
+      opacity: 1;
+    }
+}
 .arrow{
     grid-area: arrow;
     justify-self: center;
     position: absolute;
-    top: 500px;
+    top: 400px;
+    width: auto;
+    height: auto;
+    animation-name: arrow-movement;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+@keyframes arrow-movement{
+    0%{
+      transform: translateY(0);
+    }
+    100%{
+      transform: translateY(15px);
+    }
 }
 .arrow img{
     width: 70px;
@@ -236,7 +274,7 @@ body {
 }
 @media all and (max-width: 768px){
     .main{
-        margin: 50px 0 0 0;
+        margin: 40px 0 0 0;
     }
     .hero{
         align-content: center;
